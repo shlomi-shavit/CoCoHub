@@ -1,0 +1,58 @@
+.wrapper {
+    
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+        margin: 50px auto;
+        max-width: 1500px;
+
+        li {
+            width: 33%;
+            padding: 2px;
+            box-sizing: border-box;
+            height: 280px;
+            overflow: hidden;
+            cursor: pointer;
+
+            @media (max-width:1260px) {
+                width: 50%;
+            }
+
+            @media (max-width:900px) {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+:global {
+
+    .enter{
+        & > div{
+            transform: scale(0.5);
+            opacity: 0;
+            border: solid 2px rgb(200, 255, 0);
+        }     
+    }
+    
+    .exit.exit-active {
+ 
+         & > div{
+            transform: scale(0.5);
+            opacity: 0;
+            border: solid 2px rgb(200, 255, 0);
+        }
+    }
+    
+    .enter-done {
+        & > div{
+            opacity: 1;
+            transform: scale(1);
+            position:absolute;
+        }
+        
+    }
+}
