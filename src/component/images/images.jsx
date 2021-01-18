@@ -60,13 +60,10 @@ const Images = () => {
             <CSSTransition
                 in={showPopup}
                 timeout={100}
-                className={classes.popupA}
                 unmountOnExit>
 
                 <Popup
                     image={data[imageIndex]}
-                    variant="primary"
-                    dismissible
                     onClose={() => setShowPopup(false)}
                 />
 
