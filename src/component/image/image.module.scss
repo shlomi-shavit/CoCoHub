@@ -11,6 +11,9 @@
     }
     .title {
       opacity: 1;
+      @media (max-width:1024px) {
+        opacity: 0;
+      }
     }
     p{
       transform: scale(1);
